@@ -32,4 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/haproxy-custom:latest
+          tags: ghcr.io/${{ github.repository_owner }}/ha-redir:latest
