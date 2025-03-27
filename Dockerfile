@@ -7,6 +7,6 @@ RUN apt-get install -y lua5.4 luarocks libmaxminddb0 libmaxminddb-dev liblua5.4-
 RUN apt-get install -y cmake make gcc g++
 RUN luarocks --lua-version=5.4 install geoip2
 #RUN luarocks install lua-mmdb
-#COPY build/geolocate.lua /var/lib/haproxy/geolocate.lua
-#COPY code/isp/GeoIP2-ISP.mmdb /var/lib/haproxy/GeoIP2-ISP.mmdb
+COPY geolocate.lua /var/lib/haproxy/geolocate.lua
+COPY geo.bin /var/lib/haproxy/geo.bin
 USER haproxy
